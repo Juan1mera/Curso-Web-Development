@@ -1,0 +1,40 @@
+:root{
+    --oscurito: #232226 ;
+    --azul: #253342;
+    --verde: #3e5954;
+    --verdecito: #5e9188;
+    --clarito: #eae3d0;
+
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+    font-family: "Roboto Slab", serif;
+}
+
+h1 span{
+    font-size: 2rem;
+}
+.titulo{
+    text-align: center;
+    font-size: 3.4rem;
+    color: var(--azul);
+
+}
+.container{
+    width: 120rem;
+    margin: 0 auto 0 auto ;
+}
+.nav_bg{
+    background-color: var(--azul);
+}
+h2.titulo span{
+    font-size: 2rem;
+}
+
+.navegacion_principal{
+    background-color: var(--azul);
+
+}
