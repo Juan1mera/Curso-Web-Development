@@ -1,34 +1,96 @@
 :root{
     --oscurito: #232226 ;
     --azul: #253342;
-    --verde: #3e5954;
+    --verde: #2b5166;
     --verdecito: #5e9188;
     --clarito: #eae3d0;
-
 }
+
+
+
+
+
 html{
     font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
 }
 body{
-    font-size: 16px;
+    font-size: 16px;/* 1rem = 10px */
     font-family: "Roboto Slab", serif;
+    background-image: linear-gradient(to top, #fff9d8 0%, var(--clarito) 100%);
 }
-
-h1 span{
+.titulo span{
     font-size: 2rem;
 }
-.titulo{
-    text-align: center;
-    font-size: 3.4rem;
-    color: var(--azul);
 
-}
-h2.titulo span{
-    font-size: 2rem;
-}
 .container{
     max-width: 120rem;
-    margin: 0 auto 0 auto ;
+    margin: 3rem auto 0 auto ;
+}
+.boton{
+    background-color: var(--clarito);
+    color: var(--azul);
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    border-radius: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 80%;
+    text-align: center;
+    border: none;
+}
+@media(min-width: 490px){
+    .boton{
+        width: auto;
+    }
+}
+.boton:hover{
+    cursor: pointer;
+}
+
+/*----------Utilidades----------------*/
+.sombra{
+    -webkit-box-shadow: 2.5px 5.5px 19.5px 3.5px #a5a5a5;
+    -moz-box-shadow: 2.5px 5.5px 19.5px 3.5px #a5a5a5;
+    box-shadow: 2.5px 5.5px 19.5px 3.5px #a5a5a5;
+    background-color: var(--clarito);
+    border-radius: 10px;
+    padding: 2rem;
+}
+h1{
+    font-size: 3.8rem;
+    text-align: center;
+}
+h2{
+    font-size: 2.8rem;
+    text-align: center;
+}
+h3{
+    font-size: 1.8rem;
+    text-align: center;
+}
+.w-100{
+    width: 100%;
+}
+.flex{
+    display: flex;
+}
+.jc{
+    justify-content: end;
+}
+.w-100{
+    width: 100%;
+}
+@media(min-width: 490px){
+    .w-100{
+        width: auto;
+    }
+    
 }
 
 /*------------------------------ Barra de navegacion-------------------------------------- */
@@ -61,4 +123,93 @@ h2.titulo span{
     border-radius: 10px;
 }
 /* ----------------------------------Imagen, info, etc---------------------*/
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative;
+}
 
+.container_hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container_hero h2, .container_hero p{
+    color: var(--clarito);
+}
+/* ----------------------------------Servicios---------------------*/
+
+@media(min-width:769px ){
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);/* 1fr = 1 fraccion*/
+        column-gap: 3rem;
+    }
+}
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.servicio h3{
+    color: var(--azul);
+    font-weight: 400px;
+}
+.servicio p{
+    line-height: 2;
+}
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--verde);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/*----------------------------------Formulario------------------------------------------------*/
+.formulario{
+    background-color: var(--verde);
+    width: min(60rem, 100%); /*min() Utiliza el valor mas peque;o*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+.formulario fieldset{ /* Elimina el borde del formulario*/
+    border: none;
+}
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--clarito);
+}
+
+
+.info{
+    margin-bottom: 1rem;
+}
+.info label{
+    color: var(--clarito);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+.input-info{
+    background-color: #a5a5a5;
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+}
