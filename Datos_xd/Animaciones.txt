@@ -1,0 +1,9 @@
+.ejemplo:hover{
+
+}
+//:hover se usa para darle una animacion cuando el mouse este encima
+
+.ejemplo:focus{
+
+}
+//Mantiene seleccionado un elemento

@@ -23,18 +23,42 @@ h1 span{
     color: var(--azul);
 
 }
-.container{
-    width: 120rem;
-    margin: 0 auto 0 auto ;
-}
-.nav_bg{
-    background-color: var(--azul);
-}
 h2.titulo span{
     font-size: 2rem;
 }
-
-.navegacion_principal{
-    background-color: var(--azul);
-
+.container{
+    max-width: 120rem;
+    margin: 0 auto 0 auto ;
 }
+
+/*------------------------------ Barra de navegacion-------------------------------------- */
+.nav_bg{
+    background-color: var(--azul);
+}
+.navegacion_principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media(min-width: 480px){
+    .navegacion_principal{
+        flex-direction: row; 
+        justify-content: space-evenly;
+    }
+}
+.navegacion_principal a{
+    color: var(--clarito);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1.5rem;
+}
+.navegacion_principal a:hover{
+    background: rgba( 255, 255, 255, 0.35 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px ); 
+    color: #253342;
+    border-radius: 10px;
+}
+/* ----------------------------------Imagen, info, etc---------------------*/
+
