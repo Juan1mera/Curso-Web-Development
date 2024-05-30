@@ -6,21 +6,18 @@
     --clarito: #eae3d0;
 }
 
-
-
-
-
 html{
     font-size: 62.5%;
     box-sizing: border-box;
     scroll-snap-type: y mandatory;
 }
+/*
 .servicios,
 .navegacion_principal,
 .formulario{
     scroll-snap-align: center;
     scroll-snap-stop: always;
-}
+}*/
 *, *:before, *:after{
     box-sizing: inherit;
 }
